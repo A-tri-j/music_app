@@ -1,0 +1,35 @@
+# Root .gitignore for Music Project
+
+# Environment files & Secrets
+.env
+.env.*
+*.env
+!.env.example
+
+# Python / Backend
+**/__pycache__/
+**/*.py[cod]
+backend/venv/
+backend/env/
+backend/.venv/
+backend/.pytest_cache/
+backend/.coverage
+backend/build/
+backend/dist/
+backend/*.egg-info/
+
+# Frontend / Node
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+frontend/.oxlintrc.json
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDEs & System files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log
