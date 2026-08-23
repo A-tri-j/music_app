@@ -1,6 +1,11 @@
 import axios from 'axios'
 
-const rawBaseURL = import.meta.env.VITE_API_BASE_URL || 'http://127.0.0.1:8000'
+// In production, fallback to the deployed Render backend if VITE_API_BASE_URL is not set
+const defaultURL = import.meta.env.PROD
+  ? 'https://music-app-9erx.onrender.com'
+  : 'http://127.0.0.1:8000'
+
+const rawBaseURL = import.meta.env.VITE_API_BASE_URL || defaultURL
 const baseURL = rawBaseURL.replace(/\/+$/, '')
 
 const api = axios.create({
